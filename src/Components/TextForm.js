@@ -49,21 +49,21 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>
-          Convert To Uppercase
-        </button>
-        <button className="btn btn-primary mx-3" onClick={handleLowClick}>
-          Convert To Lowercase
-        </button>
-        <button className="btn btn-primary mx-3" onClick={handleClear}>
-          Clear
-        </button>
+        <button className="btn btn-primary m-2">Convert To Uppercase</button>
+        <button className="btn btn-primary m-2">Convert To Lowercase</button>
+        <button className="btn btn-danger m-2">Clear</button>
+
         <h1>Your Summarised Text Here: </h1>
         <p>
-          {text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length} words, {text.length} characters.
+          {text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length}{" "}
+          words, {text.length} characters.
         </p>
         <p>
-          {0.008 * (text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length)} minutes.
+          {0.008 *
+            (text.trim().length === 0
+              ? 0
+              : text.trim().split(/\s+/).length)}{" "}
+          minutes.
         </p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : "Nothing to preview."}</p>
